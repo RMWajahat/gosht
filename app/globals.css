@@ -1,0 +1,107 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+/* GOSHT Brand Color System - Luxury Organic Halal Meat Shop */
+:root {
+  /* Primary Colors - Updated to luxury gold and earth green with premium feel */
+  --gosht-black: #0a0a0a;
+  --gosht-gold: hsl(33.79deg 39.37% 56.67%);
+  --gosht-green: hsl(76.29deg 41.67% 32.94%);
+  
+  /* Neutrals */
+  --gosht-white: #f5f5f5;
+  --gosht-white-dark: #e8e8e8;
+  --gosht-gray: #4a4a4a;
+  
+  /* Design tokens */
+  --background: var(--gosht-black);
+  --foreground: var(--gosht-white);
+  --primary: var(--gosht-black);
+  --primary-foreground: var(--gosht-gold);
+  --accent: var(--gosht-gold);
+  --accent-foreground: var(--gosht-black);
+  --secondary: var(--gosht-green);
+  --secondary-foreground: var(--gosht-white);
+  --muted: var(--gosht-gray);
+  --muted-foreground: var(--gosht-white);
+  --border: var(--gosht-gold);
+  --radius: 0;
+}
+
+.dark {
+  --background: var(--gosht-black);
+  --foreground: var(--gosht-white);
+}
+
+@theme inline {
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --radius: var(--radius);
+}
+
+@layer base {
+  * {
+    @apply outline-none;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Smooth scrolling and animations */
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes parallax {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+a, button{
+  cursor: pointer;
+}
