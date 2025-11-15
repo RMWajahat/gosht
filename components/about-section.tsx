@@ -31,18 +31,18 @@ export default function AboutSection() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-12 items-center">
           {/* Images */}
           <div className={`space-y-6 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <div className="aspect-square overflow-hidden">
-              <img 
-                src="/healthy-livestock-goat-farm-certified-organic.jpg" 
-                alt="Certified Organic Livestock" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
             <div className="aspect-video overflow-hidden">
               <img 
-                src="/fresh-butchered-halal-meat-premium-quality.jpg" 
+              src="/cow.jpg" 
+              alt="Certified Organic Livestock" 
+              className="w-full h-full object-cover object-start hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div className="aspect-square overflow-hidden">
+              <img 
+                src="/meat.jpg" 
                 alt="Premium Fresh Meat" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="h-full w-full object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>

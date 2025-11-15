@@ -5,7 +5,7 @@ import { useIntersectionObserver } from '@/hooks/use-intersection-observer'
 export default function ContactSection() {
   const { ref, isVisible } = useIntersectionObserver()
 
-  const whatsappNumber = '+923463336286'
+  const whatsappNumber = '+923335424192'
   const whatsappMessage = encodeURIComponent('Hello GOSHT! I would like to place an order.')
   const whatsappLink = `https://wa.me/${whatsappNumber.replace('+', '')}?text=${whatsappMessage}`
 
